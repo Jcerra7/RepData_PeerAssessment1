@@ -27,7 +27,7 @@
     steps_day <- aggregate(steps ~ date, data = activity, FUN = sum, na.rm = TRUE)
     hist(steps_day$steps, xlab = "Steps per Day", main = "Steps taken per day", col = "blue")
 
-![](/Users/jcerra/Desktop/test/figures/unnamed-chunk-2-1.png)
+![](./figures/unnamed-chunk-2-1.png)
 
 #### 3. Mean and Median num of steps per day
 
@@ -46,7 +46,7 @@
     avg<- tapply(activity$steps, activity$interval, mean, na.rm=TRUE)
     plot(names(avg), avg, xlab="5 minutes intervals", type="l", ylab="Average number of steps")
 
-![](/Users/jcerra/Desktop/test/figures/unnamed-chunk-4-1.png)
+![](./figures/unnamed-chunk-4-1.png)
 
 #### 5. The 5-minute interval that, on average, contains the maximum number of steps.
 
@@ -74,7 +74,7 @@
     stepseachday <- tapply(imputedata$steps, imputedata$date, sum, na.rm=TRUE)
     qplot(stepseachday, xlab="No. of Steps Taken Each Day", ylab="Total Frequency", binwidth=500)
 
-![](/Users/jcerra/Desktop/test/figures/unnamed-chunk-7-1.png)
+![](./figures/unnamed-chunk-7-1.png)
 
     medianeach<- median(stepseachday)
     meaneach<- mean(stepseachday)
@@ -98,4 +98,4 @@
         xlab("5 Minute Interval") + 
         ylab("Average number of steps")
 
-![](/Users/jcerra/Desktop/test/figures/unnamed-chunk-8-1.png)
+![](./figures/unnamed-chunk-8-1.png)
